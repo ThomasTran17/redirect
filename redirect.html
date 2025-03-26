@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      const params = new URLSearchParams(window.location.hash.substring(1));
+      const idToken = params.get("id_token");
+
+      if (idToken) {
+        window.location.href = `optiverse://login?id_token=${idToken}`;
+      } else {
+        document.body.innerHTML = "<h2>❌ Failed to retrieve id_token from Google</h2>";
+      }
+    </script>
+  </head>
+  <body>
+    <p>🔁 Redirecting back to OptiVerse app...</p>
+  </body>
+</html>
