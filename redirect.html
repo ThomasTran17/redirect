@@ -8,10 +8,10 @@
       const params = new URLSearchParams(window.location.hash.substring(1));
       const code = params.get("code");
 
-      if (idToken) {
-        window.location.href = `exp://ymkqysy-anonymous-8081.exp.direct/--/login?id_token=${code}`;
+      if (code) {
+        window.location.href = `exp://ymkqysy-anonymous-8081.exp.direct/--/login?code=${code}`;
       } else {
-        document.body.innerHTML = "<h2>❌ Failed to retrieve id_token from Google</h2>";
+        document.body.innerHTML = "<h2>❌ Failed to retrieve code from Google</h2>";
       }
     </script>
   </head>
