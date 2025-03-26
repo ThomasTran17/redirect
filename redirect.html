@@ -6,10 +6,10 @@
     <title>Redirecting...</title>
     <script>
       const params = new URLSearchParams(window.location.hash.substring(1));
-      const idToken = params.get("id_token");
+      const code = params.get("code");
 
       if (idToken) {
-        window.location.href = `exp://ymkqysy-anonymous-8081.exp.direct/--/login?id_token=${idToken}`;
+        window.location.href = `exp://ymkqysy-anonymous-8081.exp.direct/--/login?id_token=${code}`;
       } else {
         document.body.innerHTML = "<h2>❌ Failed to retrieve id_token from Google</h2>";
       }
