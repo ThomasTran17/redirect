@@ -9,7 +9,7 @@
       const idToken = params.get("id_token");
 
       if (idToken) {
-        window.location.href = `optiverse://login?id_token=${idToken}`;
+        window.location.href = `exp://ymkqysy-anonymous-8081.exp.direct/--/login?id_token=${idToken}`;
       } else {
         document.body.innerHTML = "<h2>❌ Failed to retrieve id_token from Google</h2>";
       }
